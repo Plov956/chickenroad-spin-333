@@ -1,0 +1,423 @@
+:root {
+    --tar: #101014; --asphalt: #17181d; --coal: #0c0c10; --lime: #d4ff3f; --pink: #ff4fa3;
+    --paper: #f2f3f7; --smoke: rgba(242, 243, 247, 0.68); --seam: rgba(255, 255, 255, 0.09);
+    --glass: rgba(23, 24, 29, 0.72); --glow-lime: 0 0 18px rgba(212, 255, 63, 0.35);
+    --glow-pink: 0 0 18px rgba(255, 79, 163, 0.35);
+    --head: "Unbounded", "Segoe UI", system-ui, sans-serif;
+    --body: "Rubik", "Helvetica Neue", Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0; min-height: 100vh;
+    background: radial-gradient(680px 340px at 12% -4%, rgba(255, 79, 163, 0.10), transparent 70%), radial-gradient(760px 420px at 88% 12%, rgba(212, 255, 63, 0.08), transparent 70%), var(--tar);
+    color: var(--paper); font-family: var(--body); font-size: 16px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+[id] { scroll-margin-top: 24px; }
+
+
+.strut-ticker-c61fbeb0 {
+    overflow: hidden; border-bottom: 1px solid var(--seam); background: var(--coal);
+    padding: 9px 0;
+}
+.strut-ticker-belt-c61fbeb0 {
+    display: flex; width: max-content; animation: strut-crawl 26s linear infinite;
+}
+.strut-ticker-item-c61fbeb0 {
+    flex: 0 0 auto; margin-right: 2.6rem; font-family: var(--head); font-size: 0.62rem;
+    font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lime);
+    white-space: nowrap;
+}
+.strut-ticker-item-c61fbeb0::after { content: "\2726"; padding-left: 2.6rem; color: var(--pink); }
+@keyframes strut-crawl {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+.strut-marquee-c61fbeb0 { padding: 44px 20px 8px; text-align: center; }
+.strut-sign-c61fbeb0 {
+    margin: 0; font-family: var(--head); font-size: clamp(1.5rem, 4.6vw, 2.4rem);
+    font-weight: 700; letter-spacing: 0.02em; color: #ffffff;
+    text-shadow: 0 0 12px rgba(212, 255, 63, 0.55), 0 0 42px rgba(212, 255, 63, 0.25);
+}
+.strut-sign-sub-c61fbeb0 {
+    margin: 10px auto 0; max-width: 520px; color: var(--smoke); font-size: 0.98rem;
+}
+
+
+.strut-city-c61fbeb0 { padding: 26px 20px 30px; }
+
+
+.strut-arcade-c61fbeb0 { display: flex; justify-content: center; padding: 14px 0 26px; }
+.strut-phone-c61fbeb0 {
+    width: min(370px, 100%); border: 1px solid rgba(212, 255, 63, 0.30);
+    border-radius: 36px;
+    background: linear-gradient(170deg, rgba(28, 29, 36, 0.85), var(--glass));
+    box-shadow: 0 0 0 5px rgba(8, 8, 11, 0.9), 0 0 46px rgba(212, 255, 63, 0.10), 0 24px 70px rgba(255, 79, 163, 0.08);
+    backdrop-filter: blur(12px);
+}
+.strut-notch-c61fbeb0 {
+    width: 112px; height: 20px; margin: 0 auto; background: var(--coal);
+    border-radius: 0 0 14px 14px;
+}
+.strut-cab-c61fbeb0 { padding: 14px 16px 20px; }
+.strut-bank-c61fbeb0 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.strut-bank-word-c61fbeb0 {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-bank-count-c61fbeb0 {
+    font-family: var(--head); font-size: 1.05rem; font-weight: 700; color: var(--lime);
+    font-variant-numeric: tabular-nums;
+}
+.strut-refill-c61fbeb0 {
+    margin-left: auto; padding: 4px 13px; border: 1px solid rgba(255, 79, 163, 0.55);
+    border-radius: 999px; background: transparent; color: var(--pink);
+    font-family: var(--body); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer;
+    transition: box-shadow 0.16s ease, color 0.16s ease;
+}
+.strut-refill-c61fbeb0:hover:enabled { box-shadow: var(--glow-pink); color: #ffffff; }
+.strut-refill-c61fbeb0:disabled { opacity: 0.4; cursor: default; }
+
+
+.strut-gears-c61fbeb0 {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-bottom: 14px;
+}
+.strut-gear-c61fbeb0 {
+    padding: 8px 4px; border: 1px solid var(--seam); border-radius: 11px;
+    background: rgba(255, 255, 255, 0.03); color: var(--smoke); font-family: var(--head);
+    font-size: 0.6rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.strut-gear-c61fbeb0:hover:enabled { border-color: rgba(212, 255, 63, 0.5); color: #ffffff; }
+.strut-gear-live-c61fbeb0, .strut-gear-live-c61fbeb0:hover:enabled {
+    background: var(--lime); border-color: var(--lime); color: var(--tar);
+    box-shadow: var(--glow-lime);
+}
+.strut-gear-c61fbeb0:disabled { opacity: 0.55; cursor: default; }
+
+
+.strut-meters-c61fbeb0 {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;
+}
+.strut-meter-c61fbeb0 {
+    display: flex; flex-direction: column; gap: 2px; padding: 8px 10px;
+    border: 1px solid var(--seam); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+.strut-meter-name-c61fbeb0 {
+    font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-meter-read-c61fbeb0 {
+    font-family: var(--head); font-size: 0.92rem; font-weight: 500; color: #ffffff;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.strut-street-c61fbeb0 {
+    display: flex; flex-direction: column; overflow: hidden; margin-bottom: 12px;
+    border: 1px solid var(--seam); border-radius: 16px; background: var(--asphalt);
+}
+.strut-lane-c61fbeb0 {
+    position: relative; height: 33px; flex: 0 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); overflow: hidden;
+}
+.strut-lane-c61fbeb0::after {
+    content: ""; position: absolute; left: 10px; right: 64px; top: 50%;
+    border-top: 2px dashed rgba(242, 243, 247, 0.14);
+}
+.strut-lane-mult-c61fbeb0 {
+    position: absolute; right: 9px; top: 50%; transform: translateY(-50%); z-index: 2;
+    padding: 1px 7px; border-radius: 999px; background: rgba(12, 12, 16, 0.8);
+    font-family: var(--head); font-size: 0.56rem; font-weight: 500; color: var(--smoke);
+    font-variant-numeric: tabular-nums;
+}
+.strut-lane-done-c61fbeb0 { background: rgba(212, 255, 63, 0.07); }
+.strut-lane-done-c61fbeb0 .strut-lane-mult-c61fbeb0 { color: var(--lime); }
+.strut-lane-next-c61fbeb0 { animation: strut-pulse 1.15s ease-in-out infinite alternate; }
+.strut-lane-next-c61fbeb0 .strut-lane-mult-c61fbeb0 { color: #ffffff; }
+@keyframes strut-pulse {
+    from { box-shadow: inset 0 0 0 1px rgba(212, 255, 63, 0.15); }
+    to { box-shadow: inset 0 0 10px 1px rgba(212, 255, 63, 0.4); }
+}
+.strut-lane-smash-c61fbeb0 { background: rgba(255, 79, 163, 0.12); }
+.strut-lane-smash-c61fbeb0::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 55%; z-index: 1;
+    background: linear-gradient(90deg, transparent, rgba(255, 250, 214, 0.85), transparent);
+    transform: skewX(-18deg); animation: strut-beam 0.75s ease-in forwards;
+}
+@keyframes strut-beam {
+    to { left: 115%; }
+}
+.strut-car-c61fbeb0 {
+    position: absolute; top: 50%; left: -18%; z-index: 3; transform: translateY(-50%);
+    font-size: 19px; line-height: 1; animation: strut-drive 0.7s ease-in forwards;
+}
+@keyframes strut-drive {
+    to { left: 108%; }
+}
+.strut-kerb-c61fbeb0 {
+    position: relative; height: 42px; flex: 0 0 auto;
+    background: repeating-linear-gradient(45deg, #1d1e25 0 12px, #26202b 12px 24px);
+    border-top: 1px solid rgba(255, 79, 163, 0.25);
+}
+.strut-hen-c61fbeb0 {
+    position: absolute; left: 50%; top: 50%; z-index: 4; transform: translate(-50%, -54%);
+    font-size: 22px; line-height: 1; text-shadow: 0 0 9px rgba(212, 255, 63, 0.65);
+}
+.strut-hen-hopping-c61fbeb0 { animation: strut-hop 0.28s ease-out; }
+@keyframes strut-hop {
+    0% { transform: translate(-50%, 30%) scale(0.85); }
+    60% { transform: translate(-50%, -70%) scale(1.08); }
+    100% { transform: translate(-50%, -54%) scale(1); }
+}
+.strut-hen-safe-c61fbeb0 { text-shadow: 0 0 16px rgba(212, 255, 63, 0.95); }
+
+
+.strut-callout-c61fbeb0 {
+    min-height: 2.6em; margin: 0 0 12px; font-size: 0.88rem; font-weight: 500;
+    text-align: center; color: var(--smoke);
+}
+.strut-callout-c61fbeb0.strut-good-c61fbeb0 { color: var(--lime); text-shadow: 0 0 14px rgba(212, 255, 63, 0.4); }
+.strut-callout-c61fbeb0.strut-bad-c61fbeb0 { color: var(--pink); text-shadow: 0 0 14px rgba(255, 79, 163, 0.4); }
+.strut-stake-row-c61fbeb0 { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.strut-stake-word-c61fbeb0 {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-stake-c61fbeb0 {
+    flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--seam);
+    border-radius: 12px; background: var(--coal); color: #ffffff; font-family: var(--body);
+    font-size: 1rem; font-weight: 600; text-align: center; -moz-appearance: textfield;
+    appearance: textfield;
+}
+.strut-stake-c61fbeb0::-webkit-outer-spin-button, .strut-stake-c61fbeb0::-webkit-inner-spin-button {
+    -webkit-appearance: none; margin: 0;
+}
+.strut-stake-c61fbeb0:focus {
+    outline: none; border-color: rgba(212, 255, 63, 0.6);
+    box-shadow: 0 0 0 3px rgba(212, 255, 63, 0.14);
+}
+.strut-stake-c61fbeb0:disabled { color: var(--smoke); }
+.strut-nudge-c61fbeb0 {
+    width: 44px; padding: 10px 0; border: 1px solid var(--seam); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04); color: var(--paper); font-family: var(--body);
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+.strut-nudge-c61fbeb0:hover:enabled { border-color: rgba(212, 255, 63, 0.55); color: var(--lime); }
+.strut-nudge-c61fbeb0:disabled { opacity: 0.4; cursor: default; }
+.strut-go-row-c61fbeb0 { display: flex; gap: 10px; }
+.strut-hop-btn-c61fbeb0, .strut-collect-btn-c61fbeb0 {
+    flex: 1; padding: 13px 10px; border-radius: 14px; font-family: var(--head);
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.12s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.strut-hop-btn-c61fbeb0 {
+    border: 1px solid var(--lime); background: var(--lime); color: var(--tar);
+    box-shadow: var(--glow-lime);
+}
+.strut-hop-btn-c61fbeb0:hover:enabled {
+    transform: translateY(-1px); box-shadow: 0 0 26px rgba(212, 255, 63, 0.5);
+}
+.strut-collect-btn-c61fbeb0 {
+    border: 1px solid var(--pink); background: transparent; color: var(--pink);
+}
+.strut-collect-btn-c61fbeb0:hover:enabled {
+    box-shadow: var(--glow-pink); color: #ffffff; transform: translateY(-1px);
+}
+.strut-hop-btn-c61fbeb0:disabled, .strut-collect-btn-c61fbeb0:disabled {
+    border-color: var(--seam); background: rgba(255, 255, 255, 0.03);
+    color: rgba(242, 243, 247, 0.35); box-shadow: none; cursor: default; transform: none;
+}
+.strut-no-js-c61fbeb0 {
+    margin: 14px 0 0; padding: 12px 14px; border: 1px dashed rgba(255, 79, 163, 0.6);
+    border-radius: 12px; color: var(--pink); font-size: 0.88rem;
+}
+
+
+.strut-rooms-c61fbeb0 { max-width: 860px; margin: 0 auto; padding: 14px 0 8px; }
+.strut-rooms-c61fbeb0:has(.strut-glow-track-c61fbeb0:empty) { display: none; }
+.strut-rooms-sign-c61fbeb0 {
+    margin: 0 0 14px; font-family: var(--head); font-size: 1.05rem; font-weight: 500;
+    letter-spacing: 0.04em; color: #ffffff;
+}
+.strut-glow-rail-c61fbeb0 {
+    overflow-x: auto; padding-bottom: 12px;
+    scrollbar-color: rgba(212, 255, 63, 0.4) transparent;
+}
+.strut-glow-rail-c61fbeb0::-webkit-scrollbar { height: 8px; }
+.strut-glow-rail-c61fbeb0::-webkit-scrollbar-thumb {
+    background: rgba(212, 255, 63, 0.35); border-radius: 999px;
+}
+.strut-glow-rail-c61fbeb0::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04); border-radius: 999px;
+}
+.strut-glow-track-c61fbeb0 { display: flex; gap: 14px; width: max-content; padding: 4px 2px; }
+.strut-token-c61fbeb0 {
+    display: flex; flex-direction: column; align-items: center; gap: 9px; min-width: 186px;
+    padding: 18px 16px; border: 1px solid rgba(212, 255, 63, 0.30); border-radius: 18px;
+    background: var(--glass); box-shadow: 0 0 22px rgba(212, 255, 63, 0.08);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.strut-token-c61fbeb0:nth-child(even) {
+    border-color: rgba(255, 79, 163, 0.35); box-shadow: 0 0 22px rgba(255, 79, 163, 0.08);
+}
+.strut-token-c61fbeb0:hover {
+    transform: translateY(-3px); box-shadow: 0 0 30px rgba(212, 255, 63, 0.2);
+}
+.strut-token-c61fbeb0:nth-child(even):hover { box-shadow: 0 0 30px rgba(255, 79, 163, 0.22); }
+.strut-token-art-c61fbeb0 {
+    width: 56px; height: 56px; object-fit: contain; border-radius: 13px;
+    background: var(--coal);
+}
+.strut-token-tag-c61fbeb0 {
+    max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    font-family: var(--head); font-size: 0.74rem; font-weight: 500; color: #ffffff;
+    text-align: center;
+}
+.strut-token-jump-c61fbeb0 {
+    padding: 8px 22px; border-radius: 999px; background: var(--lime); color: var(--tar);
+    font-size: 0.82rem; font-weight: 600; text-decoration: none; white-space: nowrap;
+    transition: box-shadow 0.15s ease, transform 0.12s ease;
+}
+.strut-token-c61fbeb0:nth-child(even) .strut-token-jump-c61fbeb0 { background: var(--pink); color: #ffffff; }
+.strut-token-jump-c61fbeb0:hover { transform: translateY(-1px); box-shadow: var(--glow-lime); }
+.strut-token-c61fbeb0:nth-child(even) .strut-token-jump-c61fbeb0:hover { box-shadow: var(--glow-pink); }
+
+
+.strut-reading-c61fbeb0 { padding: 26px 0 6px; }
+.strut-article-c61fbeb0 { max-width: 740px; margin: 0 auto; }
+.strut-article-c61fbeb0 h1 {
+    margin: 0 0 18px; font-family: var(--head); font-size: clamp(1.45rem, 3.8vw, 2.05rem);
+    font-weight: 700; line-height: 1.28; color: #ffffff;
+}
+.strut-article-c61fbeb0 h2 {
+    margin: 42px 0 14px; padding-left: 13px; border-left: 3px solid var(--lime);
+    font-family: var(--head); font-size: 1.16rem; font-weight: 500; line-height: 1.35;
+    color: #ffffff;
+}
+.strut-article-c61fbeb0 p { margin: 0 0 16px; color: var(--smoke); }
+.strut-article-c61fbeb0 a { color: var(--lime); text-decoration: underline; text-underline-offset: 3px; }
+.strut-article-c61fbeb0 a:hover { color: #ffffff; }
+.strut-article-c61fbeb0 ul, .strut-article-c61fbeb0 ol {
+    margin: 0 0 16px; padding-left: 24px; color: var(--smoke);
+}
+.strut-article-c61fbeb0 li { margin-bottom: 9px; }
+.strut-steps-c61fbeb0 { list-style: none; counter-reset: strut-step; padding-left: 0; }
+.strut-steps-c61fbeb0 li {
+    position: relative; counter-increment: strut-step; margin-bottom: 13px;
+    padding-left: 42px;
+}
+.strut-steps-c61fbeb0 li::before {
+    content: counter(strut-step); position: absolute; left: 0; top: 0.1em; width: 27px;
+    height: 27px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(212, 255, 63, 0.55); border-radius: 9px;
+    font-family: var(--head); font-size: 0.74rem; color: var(--lime);
+}
+.strut-tier-table-c61fbeb0 {
+    width: 100%; margin: 0 0 16px; border: 1px solid var(--seam); border-radius: 14px;
+    border-collapse: separate; border-spacing: 0; overflow: hidden;
+    background: rgba(255, 255, 255, 0.03); font-size: 0.9rem;
+}
+.strut-tier-table-c61fbeb0 th {
+    padding: 10px 13px; text-align: left; font-family: var(--head); font-size: 0.62rem;
+    font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime);
+    background: rgba(212, 255, 63, 0.06); border-bottom: 1px solid var(--seam);
+}
+.strut-tier-table-c61fbeb0 td {
+    padding: 10px 13px; vertical-align: top; color: var(--smoke);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.strut-tier-table-c61fbeb0 tbody tr:last-child td { border-bottom: 0; }
+.strut-tier-table-c61fbeb0 td:first-child { color: #ffffff; font-weight: 600; }
+.strut-note-c61fbeb0 {
+    margin: 0 0 16px; padding: 14px 17px; border: 1px dashed rgba(212, 255, 63, 0.45);
+    border-radius: 14px; background: rgba(212, 255, 63, 0.05);
+}
+.strut-note-c61fbeb0 p { margin: 0; }
+.strut-terms-c61fbeb0 {
+    display: grid; grid-template-columns: minmax(110px, auto) 1fr; margin: 0 0 16px;
+    border: 1px solid var(--seam); border-radius: 14px; overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+.strut-terms-c61fbeb0 dt {
+    padding: 11px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: var(--head); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--lime);
+}
+.strut-terms-c61fbeb0 dd {
+    margin: 0; padding: 11px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.92rem; color: var(--smoke);
+}
+.strut-terms-c61fbeb0 dt:first-of-type, .strut-terms-c61fbeb0 dd:first-of-type { border-top: 0; }
+.strut-quote-c61fbeb0 {
+    margin: 0 0 16px; padding: 15px 19px; border-left: 3px solid var(--pink);
+    border-radius: 0 14px 14px 0; background: rgba(255, 79, 163, 0.07); color: #ffffff;
+    font-style: italic;
+}
+.strut-check-c61fbeb0, .strut-slips-c61fbeb0 { list-style: none; padding-left: 0; }
+.strut-check-c61fbeb0 li, .strut-slips-c61fbeb0 li {
+    position: relative; padding-left: 26px; margin-bottom: 10px;
+}
+.strut-check-c61fbeb0 li::before {
+    content: "\00BB"; position: absolute; left: 2px; top: -0.05em; color: var(--lime);
+    font-weight: 700; font-size: 1.1em;
+}
+.strut-slips-c61fbeb0 li::before {
+    content: "\2715"; position: absolute; left: 1px; top: 0.08em; color: var(--pink);
+    font-weight: 700; font-size: 0.9em;
+}
+.strut-faq-c61fbeb0 {
+    margin-bottom: 16px; border: 1px solid var(--seam); border-radius: 16px;
+    padding: 6px 18px 12px; background: rgba(255, 255, 255, 0.02);
+}
+.strut-faq-q-c61fbeb0 {
+    margin: 16px 0 8px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: var(--head); font-size: 0.92rem; font-weight: 500; line-height: 1.4;
+    color: var(--pink);
+}
+.strut-faq-c61fbeb0 .strut-faq-q-c61fbeb0:first-of-type { border-top: 0; padding-top: 8px; }
+.strut-faq-c61fbeb0 p { margin-bottom: 8px; }
+
+
+.strut-tail-c61fbeb0 {
+    margin-top: 42px; padding: 30px 20px 38px; border-top: 1px solid var(--seam);
+    background: var(--coal); text-align: center;
+}
+.strut-tail-note-c61fbeb0 {
+    max-width: 740px; margin: 0 auto 10px; font-size: 0.9rem; color: var(--paper);
+}
+.strut-tail-fine-c61fbeb0 { max-width: 740px; margin: 0 auto; font-size: 0.8rem; color: var(--smoke); }
+.strut-adult-c61fbeb0 {
+    display: inline-block; margin-right: 7px; padding: 1px 9px;
+    border: 1px solid var(--pink); border-radius: 8px; color: var(--pink);
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; vertical-align: 1px;
+}
+
+
+@media (max-width: 700px) {
+    .strut-city-c61fbeb0 { padding: 18px 14px 24px; }
+    .strut-marquee-c61fbeb0 { padding-top: 32px; }
+    .strut-tier-table-c61fbeb0 { display: block; overflow-x: auto; font-size: 0.84rem; }
+}
+@media (max-width: 420px) {
+    .strut-gears-c61fbeb0 { grid-template-columns: repeat(2, 1fr); }
+    .strut-cab-c61fbeb0 { padding: 12px 12px 16px; }
+    .strut-meter-read-c61fbeb0 { font-size: 0.82rem; }
+    .strut-token-c61fbeb0 { min-width: 164px; }
+    .strut-terms-c61fbeb0 { grid-template-columns: 1fr; }
+    .strut-terms-c61fbeb0 dt { padding-bottom: 2px; }
+    .strut-terms-c61fbeb0 dd { border-top: 0; padding-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .strut-ticker-belt-c61fbeb0, .strut-lane-next-c61fbeb0, .strut-hen-hopping-c61fbeb0 { animation: none; }
+    html { scroll-behavior: auto; }
+}
